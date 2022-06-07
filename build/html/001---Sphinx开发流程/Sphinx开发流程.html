@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx开发网页基本流程 &mdash; Web 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Markdown扩展语法" href="Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95.html" />
+    <link rel="prev" title="Sphinx" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Web
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sphinx</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx开发网页基本流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">01.下载Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd">02.新建文件夹并打开cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">03.新建Sphinx项目</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">04.下载额外的包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conf-py">05.更改conf.py的默认设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index">06.设置index的默认配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">07.生成网页</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github">08.Github托管</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#git">① 下载git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git-ssh">② 配置Git SSH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#githubssh-keys">③ 在GitHub上配置SSH keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conf-pygithub">④ 为conf.py增加Github发布的拓展</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">⑤ 为Sphinx项目生成网页</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docs">⑥ 建立docs文件夹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#githubsphinx">⑦ Github上新建项目并上传Sphinx项目</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">⑧ 生成网址</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95.html">Markdown扩展语法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../002---Hugo%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html">Hugo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Sphinx</a> &raquo;</li>
+      <li>Sphinx开发网页基本流程</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/001---Sphinx开发流程/Sphinx开发流程.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="sphinx">
+<h1>Sphinx开发网页基本流程<a class="headerlink" href="#sphinx" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2>01.下载Sphinx<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx
+</pre></div>
+</div>
+</section>
+<section id="cmd">
+<h2>02.新建文件夹并打开cmd<a class="headerlink" href="#cmd" title="Permalink to this headline"></a></h2>
+<p>F1：在新文件目录输入<code class="docutils literal notranslate"><span class="pre">cmd</span></code>回车</p>
+<img src="..\_static\001.png" alt="001" style="zoom:50%;" />
+<p>F2：打开cmd，切换当前路径至新文件夹</p>
+<img src="..\_static\002.png" alt="001" style="zoom:50%;" />
+</section>
+<section id="id2">
+<h2>03.新建Sphinx项目<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>在<code class="docutils literal notranslate"><span class="pre">cmd</span></code>中输入<code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>，新建项目，过程如下：</p>
+<img src="..\_static\003.png" alt="001" style="zoom:50%;" />
+<p>你会发现，当前文件夹生成了如下文件！</p>
+<img src="..\_static\004.png" alt="001" style="zoom:50%;" />
+</section>
+<section id="id3">
+<h2>04.下载额外的包<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<p>1.如果你选择用<code class="docutils literal notranslate"><span class="pre">markdown</span></code>而不是<code class="docutils literal notranslate"><span class="pre">rst</span></code>来编写网页，请下载<code class="docutils literal notranslate"><span class="pre">myst_parser</span></code></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="w"> </span><span class="s">install</span><span class="w"> </span><span class="s">myst_parser</span><span class="w"></span>
+</pre></div>
+</div>
+<p>2.在<a class="reference external" href="https://sphinx-themes.org/#themes">sphinx-themes</a>选择主题</p>
+<p>以选择<code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">the</span> <span class="pre">Docs</span></code>主题为例，你需要安装以下的包</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">rtd</span><span class="o">-</span><span class="n">theme</span>
+</pre></div>
+</div>
+<img src="..\_static\005.png" alt="001" style="zoom:50%;" />
+<p>3.为代码增加“复制代码”按钮的包</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx_copybutton
+</pre></div>
+</div>
+<p>4.使用panels功能需要安装以下包</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx_panels
+</pre></div>
+</div>
+</section>
+<section id="conf-py">
+<h2>05.更改conf.py的默认设置<a class="headerlink" href="#conf-py" title="Permalink to this headline"></a></h2>
+<p>将下面的代码复制到conf.py中，请根据实际情况做相应更改（比如项目名，扩展的包等）</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Project configuration -----------------------------------------------------</span>
+<span class="nv">project</span> <span class="o">=</span> <span class="s1">&#39;HappyLaber&#39;</span>
+<span class="nv">author</span> <span class="o">=</span> <span class="s1">&#39;Happy&#39;</span>
+<span class="nv">copyright</span> <span class="o">=</span> <span class="s1">&#39;2022, Happy&#39;</span>
+<span class="nv">release</span> <span class="o">=</span> <span class="s1">&#39;1.0.0&#39;</span>
+
+<span class="c1"># -- General configuration ------------------------------------------------</span>
+<span class="nv">source_suffix</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s1">&#39;.rst&#39;</span>: <span class="s1">&#39;restructuredtext&#39;</span>,
+    <span class="s1">&#39;.txt&#39;</span>: <span class="s1">&#39;markdown&#39;</span>,
+    <span class="s1">&#39;.md&#39;</span>: <span class="s1">&#39;markdown&#39;</span>,
+<span class="o">}</span>
+
+<span class="nv">extensions</span> <span class="o">=</span> <span class="o">[</span>
+    <span class="s1">&#39;myst_parser&#39;</span>,            <span class="c1"># Markdown</span>
+    <span class="s1">&#39;sphinx.ext.mathjax&#39;</span>,     <span class="c1"># Math</span>
+    <span class="s1">&#39;sphinx.ext.githubpages&#39;</span>, <span class="c1"># Gighub</span>
+    <span class="s1">&#39;sphinx_panels&#39;</span>,          <span class="c1"># panels</span>
+    <span class="s1">&#39;sphinx_copybutton&#39;</span>,      <span class="c1"># Copy Code</span>
+<span class="o">]</span>
+<span class="nv">mathjax_path</span> <span class="o">=</span> <span class="s2">&quot;https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span>
+
+<span class="c1"># -- Options for HTML output ----------------------------------------------</span>
+<span class="nv">templates_path</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;_templates&#39;</span><span class="o">]</span>
+<span class="nv">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<span class="nv">html_static_path</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;_static&#39;</span><span class="o">]</span>
+<span class="nv">html_theme_options</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="s2">&quot;prev_next_buttons_location&quot;</span>: <span class="s2">&quot;bottom&quot;</span>,
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="index">
+<h2>06.设置index的默认配置<a class="headerlink" href="#index" title="Permalink to this headline"></a></h2>
+<p>将<code class="docutils literal notranslate"><span class="pre">index.rst</span></code>更改为<code class="docutils literal notranslate"><span class="pre">index.md</span></code>，然后粘贴下面代码，构建<code class="docutils literal notranslate"><span class="pre">Matlab</span></code>文件夹，在文件夹下建立<code class="docutils literal notranslate"><span class="pre">index.md</span></code>文件，同理，构建<code class="docutils literal notranslate"><span class="pre">Python</span></code>文件夹，在文件夹下建立<code class="docutils literal notranslate"><span class="pre">index.md</span></code>文件，在两个<code class="docutils literal notranslate"><span class="pre">index.md</span></code>中输入你的笔记。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>toctree<span class="o">}</span>
+:caption: 编程
+:maxdepth: <span class="m">1</span>
+
+Matlab/index
+Python/index
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>07.生成网页<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<p>在主文件夹(包含<code class="docutils literal notranslate"><span class="pre">make.bat</span></code>的那个文件夹，这里是<code class="docutils literal notranslate"><span class="pre">HappyLaber</span></code>)下打开cmd，输入如下代码。</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">make</span><span class="w"> </span><span class="s">clean</span><span class="w"></span>
+<span class="n">make</span><span class="w"> </span><span class="s">html</span><span class="w"></span>
+</pre></div>
+</div>
+<p>在下面的路径中打开<code class="docutils literal notranslate"><span class="pre">index.html</span></code>，即可看到你的网页。</p>
+<img src="..\_static\006.png" alt="006" style="zoom:50%;" />
+<img src="..\_static\007.png" alt="007" style="zoom:50%;" />
+</section>
+<section id="github">
+<h2>08.Github托管<a class="headerlink" href="#github" title="Permalink to this headline"></a></h2>
+<section id="git">
+<h3>① 下载git<a class="headerlink" href="#git" title="Permalink to this headline"></a></h3>
+<p>安装完成后，需要将<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git\bin</span></code>添加至环境变量</p>
+</section>
+<section id="git-ssh">
+<h3>② 配置Git SSH<a class="headerlink" href="#git-ssh" title="Permalink to this headline"></a></h3>
+<p>打开Git Bash，输入如下格式代码</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>% 配置Git SSH
+git config --global user.name <span class="s1">&#39;simplehappy&#39;</span>
+git config --global user.email <span class="s1">&#39;1292584987@qq.com&#39;</span>
+ssh-keygen -t rsa -C <span class="s1">&#39;1292584987@qq.com&#39;</span>
+</pre></div>
+</div>
+<img src="..\_static\014.png" alt="014" style="zoom:50%;" />
+<p>找到密钥所在文件夹(上图红框里的路径)，复制<code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>的内容。</p>
+</section>
+<section id="githubssh-keys">
+<h3>③ 在GitHub上配置SSH keys<a class="headerlink" href="#githubssh-keys" title="Permalink to this headline"></a></h3>
+<p>点击<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">SSH</span> <span class="pre">key</span></code>，粘贴剪贴板上的内容，完成相关配置。</p>
+<img src="..\_static\015.png" alt="014" style="zoom:50%;" />
+</section>
+<section id="conf-pygithub">
+<h3>④ 为conf.py增加Github发布的拓展<a class="headerlink" href="#conf-pygithub" title="Permalink to this headline"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">extensions</span> <span class="o">=</span> <span class="o">[</span>
+    <span class="s1">&#39;sphinx.ext.githubpages&#39;</span>, <span class="c1"># Gighub</span>
+<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>⑤ 为Sphinx项目生成网页<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make clean
+make html
+</pre></div>
+</div>
+</section>
+<section id="docs">
+<h3>⑥ 建立docs文件夹<a class="headerlink" href="#docs" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">docs</span></code>文件夹与<code class="docutils literal notranslate"><span class="pre">build</span></code>和<code class="docutils literal notranslate"><span class="pre">source</span></code>同级，并且要把<code class="docutils literal notranslate"><span class="pre">build/html</span></code>下的文件复制到<code class="docutils literal notranslate"><span class="pre">docs</span></code>文件夹</p>
+</section>
+<section id="githubsphinx">
+<h3>⑦ Github上新建项目并上传Sphinx项目<a class="headerlink" href="#githubsphinx" title="Permalink to this headline"></a></h3>
+<p>新建项目时一定要选择<code class="docutils literal notranslate"><span class="pre">Public</span></code>，上传代码模板如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
+git add .
+git commit -m <span class="s2">&quot;first commit&quot;</span>
+git remote add origin https://github.com/happysimple/happysimple.github.io.git
+git push -u origin master
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>⑧ 生成网址<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<img src="..\_static\016.png" alt="014" style="zoom:50%;" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95.html" class="btn btn-neutral float-right" title="Markdown扩展语法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 王开心.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

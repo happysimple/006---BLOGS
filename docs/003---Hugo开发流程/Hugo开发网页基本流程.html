@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hugo开发网页基本流程 &mdash; Web 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Hugo" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Web
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../001---Sphinx%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html">Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../002---Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/index.html">Sphinx</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Hugo</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hugo开发网页基本流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.下载Hugo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.将下载文件的目录添加至环境变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.新建站点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.选择主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5.生成博客</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-hugo">6.Github托管-Hugo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Hugo</a> &raquo;</li>
+      <li>Hugo开发网页基本流程</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/003---Hugo开发流程/Hugo开发网页基本流程.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="hugo">
+<h1>Hugo开发网页基本流程<a class="headerlink" href="#hugo" title="Permalink to this headline"></a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>本文以Windows系统为例!</p>
+</div>
+<section id="id1">
+<h2>1.下载Hugo<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p><a class="reference external" href="https://github.com/gohugoio/hugo/releases">Hugo下载地址</a></p>
+</section>
+<section id="id2">
+<h2>2.将下载文件的目录添加至环境变量<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<img src="..\_static\018.png" alt="018" style="zoom:40%;" />
+<img src="..\_static\019.png" alt="019" style="zoom:50%;" />
+</section>
+<section id="id3">
+<h2>3.新建站点<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>% 打开cmd
+hugo new site yourname
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>4.选择主题<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>本文以Coder主题为例,使用F1下载</p>
+</div>
+<p>①下载Coder主题，见<a class="reference external" href="https://themes.gohugo.io/">主题</a></p>
+<p>F1：点击Download下载</p>
+<p>F2：如果网络条件较好，可以选择git克隆</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">add</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">luizdepra</span><span class="o">/</span><span class="n">hugo</span><span class="o">-</span><span class="n">coder</span><span class="o">.</span><span class="n">git</span> <span class="n">themes</span><span class="o">/</span><span class="n">hugo</span><span class="o">-</span><span class="n">coder</span>
+</pre></div>
+</div>
+<p>②下载完成后，解压至<code class="docutils literal notranslate"><span class="pre">\yourname\themes\</span></code>，并将名字中的<code class="docutils literal notranslate"><span class="pre">-main</span></code>去掉，见下图</p>
+<img src="..\_static\021.png" alt="019" style="zoom:50%;" />
+<p>③复制<code class="docutils literal notranslate"><span class="pre">\hugo-coder\exampleSite</span></code>下的所有文件至<code class="docutils literal notranslate"><span class="pre">\yourname\</span></code></p>
+<p>④打开<code class="docutils literal notranslate"><span class="pre">\content\posts</span></code>目录，删掉<code class="docutils literal notranslate"><span class="pre">rich-content.md</span></code>和<code class="docutils literal notranslate"><span class="pre">rich-content.pt-br.md</span></code></p>
+</section>
+<section id="id5">
+<h2>5.生成博客<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h2>
+<p>切换目录至<code class="docutils literal notranslate"><span class="pre">\yourname\</span></code>，在当前目录打开<code class="docutils literal notranslate"><span class="pre">cmd</span></code>，输入如下命令</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo server
+</pre></div>
+</div>
+<img src="..\_static\022.png" alt="019" style="zoom:50%;" />
+<p>不要关闭cmd！在网页打开<code class="docutils literal notranslate"><span class="pre">http://localhost:1313/</span></code>，可以看到示例网站</p>
+<img src="..\_static\023.png" alt="019" style="zoom:50%;" />
+</section>
+<hr class="docutils" />
+<section id="github-hugo">
+<h2>6.Github托管-Hugo<a class="headerlink" href="#github-hugo" title="Permalink to this headline"></a></h2>
+<p>① 下载git</p>
+<p>安装完成后，需要将<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git\bin</span></code>添加至环境变量</p>
+<p>② 配置Git SSH</p>
+<p>打开Git Bash，输入如下格式代码</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>% 配置Git SSH
+git config --global user.name <span class="s1">&#39;simplehappy&#39;</span>
+git config --global user.email <span class="s1">&#39;1292584987@qq.com&#39;</span>
+ssh-keygen -t rsa -C <span class="s1">&#39;1292584987@qq.com&#39;</span>
+</pre></div>
+</div>
+<img src="..\_static\014.png" alt="014" style="zoom:50%;" />
+<p>找到密钥所在文件夹(上图红框里的路径)，复制<code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>的内容。</p>
+<p>③ 在GitHub上配置SSH keys</p>
+<p>点击<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">SSH</span> <span class="pre">key</span></code>，粘贴剪贴板上的内容，完成相关配置。</p>
+<img src="..\_static\015.png" alt="014" style="zoom:50%;" />
+<hr class="docutils" />
+<p>④建立仓库</p>
+<p>注意：仓库名前面部分要和你的用户名相同！我这里是因为已经有了这个仓库才报错的！</p>
+<img src="..\_static\024.png" alt="014" style="zoom:50%;" />
+<p>⑤生成网页</p>
+<img src="..\_static\025.png" alt="014" style="zoom:50%;" />
+<p>生成网页后，你的仓库会多出一个<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>文件，把下图的两个文件下载下来，放到hugo的public文件夹!</p>
+<img src="..\_static\026.png" alt="014" style="zoom:50%;" />
+<p>⑥执行Hugo命令生成页面</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo
+</pre></div>
+</div>
+<p>⑦上传Public文件夹</p>
+<p>新建项目时一定要选择<code class="docutils literal notranslate"><span class="pre">Public</span></code>，上传代码模板如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
+git add .
+git commit -m <span class="s2">&quot;first commit&quot;</span>
+git remote add origin https://github.com/happysimple/Test.git
+git push -u origin master
+</pre></div>
+</div>
+<p>⑧生成网址</p>
+<img src="..\_static\027.png" alt="014" style="zoom:50%;" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Hugo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 王开心.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

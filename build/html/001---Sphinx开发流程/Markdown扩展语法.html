@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown扩展语法 &mdash; Web 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hugo" href="../002---Hugo%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html" />
+    <link rel="prev" title="Sphinx开发网页基本流程" href="Sphinx%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Web
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sphinx</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Sphinx%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html">Sphinx开发网页基本流程</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Markdown扩展语法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">01.数学公式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">02.引用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">03.特殊效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dropdown">04.dropdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#panels">05.panels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#link-button">06.link-button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tabbed">07. tabbed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">08.添加下载附件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../002---Hugo%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html">Hugo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Web</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Sphinx</a> &raquo;</li>
+      <li>Markdown扩展语法</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/001---Sphinx开发流程/Markdown扩展语法.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="markdown">
+<h1>Markdown扩展语法<a class="headerlink" href="#markdown" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2>01.数学公式<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>行间公式：<span class="nv">$$</span>a+b<span class="o">=</span>c<span class="nv">$$</span>
+行内公式：<span class="o">{</span>math<span class="o">}</span><span class="sb">`</span>a+b<span class="o">=</span>c<span class="sb">`</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>02.引用<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>文字<span class="o">](</span>链接<span class="o">)</span>
+
+<span class="o">(</span><span class="m">1</span><span class="o">)</span>注意<span class="s2">&quot;/&quot;</span>方向   
+<span class="o">(</span><span class="m">2</span><span class="o">)</span>通过../访问上级目录    
+<span class="o">(</span><span class="m">3</span><span class="o">)</span>通过./访问下级目录  
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>03.特殊效果<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>我在写论文！</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>note<span class="o">}</span>
+我在写论文！
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+<section id="dropdown">
+<h2>04.dropdown<a class="headerlink" href="#dropdown" title="Permalink to this headline"></a></h2>
+<details class="sphinx-bs dropdown card mb-3" open="open">
+<summary class="summary-title card-header">
+MyContent<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Is already visible</p>
+</div>
+</details><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>dropdown<span class="o">}</span> MyContent
+:open:
+Is already visible
+<span class="sb">```</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3 fade-in">
+<summary class="summary-title card-header">
+MyContent<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Is already fade-in</p>
+</div>
+</details><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>dropdown<span class="o">}</span> MyContent
+:animate: fade-in
+Is already fade-in
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+<section id="panels">
+<h2>05.panels<a class="headerlink" href="#panels" title="Permalink to this headline"></a></h2>
+<div class="sphinx-bs container-lg pb-3 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-4 col-md-4 col-sm-4 col-xs-6 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">地震学主站</p>
+</div>
+<div class="card-body docutils">
+<ul class="simple">
+<li><p class="card-text">计算机基础</p></li>
+<li><p class="card-text">编程基础</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 col-md-4 col-sm-4 col-xs-6 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">地震“学”科研入门教程</p>
+</div>
+<div class="card-body docutils">
+<ul class="simple">
+<li><p class="card-text">计算机基础</p></li>
+<li><p class="card-text">编程基础</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-4 col-md-4 col-sm-4 col-xs-6 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">地震“学”软件</p>
+</div>
+<div class="card-body docutils">
+<ul class="simple">
+<li><p class="card-text">计算机基础</p></li>
+<li><p class="card-text">编程基础</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>panels<span class="o">}</span>
+:container: container-lg pb-3
+:column: col-lg-4 col-md-4 col-sm-4 col-xs-6 p-2
+
+地震学主站
+^^^^^^^^^^
+- 计算机基础
+- 编程基础
+
+---
+
+地震“学”科研入门教程
+^^^^^^^^^^^^^^^^^^^
+- 计算机基础
+- 编程基础
+ 
+---
+
+地震“学”软件
+^^^^^^^^^^^^
+- 计算机基础
+- 编程基础
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+<section id="link-button">
+<h2>06.link-button<a class="headerlink" href="#link-button" title="Permalink to this headline"></a></h2>
+<p><a class="sphinx-bs btn text-wrap stretched-link btn-outline-primary reference external" href="https://www.baidu.com/"><span>baidu</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{link-button} https://www.baidu.com/
+:text: baidu
+:classes: stretched-link btn-outline-primary
+```
+</pre></div>
+</div>
+</section>
+<section id="tabbed">
+<h2>07. tabbed<a class="headerlink" href="#tabbed" title="Permalink to this headline"></a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="b66b820a-f1e5-41bb-9f14-e476ffe4e16a" name="da8159c3-1e14-40cf-a1ee-90bff38644bb" type="radio">
+</input><label class="tabbed-label" for="b66b820a-f1e5-41bb-9f14-e476ffe4e16a">
+macOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ brew install git
+</pre></div>
+</div>
+</div>
+<input id="b4f64efb-ca17-4a57-b772-46e7a7b9d246" name="da8159c3-1e14-40cf-a1ee-90bff38644bb" type="radio">
+</input><label class="tabbed-label" for="b4f64efb-ca17-4a57-b772-46e7a7b9d246">
+Windows</label><div class="tabbed-content docutils">
+<p>打开 <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>，下载并安装 Git for Windows</p>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>eval-rst<span class="o">}</span>
+.. tabbed:: macOS
+
+    ::
+    
+        $ brew install git
+
+.. tabbed:: Windows
+
+   打开 https://git-scm.com/downloads<span class="se">\ </span>，下载并安装 Git <span class="k">for</span> Windows
+<span class="sb">```</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>08.添加下载附件<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>download<span class="o">}</span><span class="sb">`</span>Jason_TEC爬虫程序<span class="o">(</span>针对网站2<span class="o">)</span>&lt;../_static/Get_JASON_TEC_FTP.m&gt;<span class="sb">`</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Sphinx%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.html" class="btn btn-neutral float-left" title="Sphinx开发网页基本流程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../002---Hugo%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.html" class="btn btn-neutral float-right" title="Hugo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, 王开心.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
