@@ -4,7 +4,7 @@
 
 ```bash
 行间公式：$$a+b=c$$
-行内公式：{math}`a+b=c`
+行内公式：1.{math}`a+b=c`   2.$a+b=c$
 ```
 
 ## 02.引用
@@ -14,7 +14,6 @@
 
 (1)注意"/"方向   
 (2)通过../访问上级目录    
-(3)通过./访问下级目录  
 ```
 
 ## 03.特殊效果
@@ -153,6 +152,6 @@ Is already fade-in
 ## 08.添加下载附件
 
 ```bash
-{download}`Jason_TEC爬虫程序(针对网站2)<../_static/Get_JASON_TEC_FTP.m>`
+{download}`Jason_TEC爬虫程序<../_static/Get_JASON_TEC_FTP.m>`
 ```
 
