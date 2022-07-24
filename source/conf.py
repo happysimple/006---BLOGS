@@ -1,5 +1,5 @@
 # -- Project configuration -----------------------------------------------------
-project = 'Web'
+project = 'Blogs'
 author = '王开心'
 copyright = '2022, 王开心'
 release = '1.0.0'
